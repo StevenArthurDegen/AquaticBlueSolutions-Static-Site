@@ -65,6 +65,7 @@ nav {
   z-index: 1;
 }
 #services-section {
+  overflow: hidden;
   position: relative;
   padding: 1rem 3rem;
   background-color: #fffaee;
@@ -76,8 +77,12 @@ nav {
   border-bottom: 2px solid #f96a06;
   font-size: 3rem;
   margin: 2rem 0;
+  z-index: 1;
+  position: relative;
 }
 .services-wrapper {
+  z-index: 1;
+  position: relative;
   padding: 0px 32px;
   display: flex;
   gap: 40px;
@@ -92,6 +97,18 @@ nav {
   margin-bottom: 0.5rem;
   color: #f96a06;
 }
+.extra-services-container {
+  position: relative;
+  z-index: 1;
+}
+.tropical-tree-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
 @media (max-width: 1000px) {
   .hero-content-container {
     padding: 2rem 1.5rem;
@@ -101,6 +118,9 @@ nav {
   .hero-content-wrapper {
     width: 100%;
   }
+  .tropical-tree-wrapper img{
+    width: 50%
+  }
 }
 @media (max-width: 700px) {
   #hero-section h1 {
@@ -109,6 +129,18 @@ nav {
   }
   .hero-content-container button {
     width: 100%;
+  }
+  .services-wrapper {
+    flex-direction: column;
+  }
+  .service-item {
+    width: 100%;
+  }
+  .tropical-tree-wrapper{
+    flex-direction: column;
+  }
+  .tropical-tree-wrapper img{
+    width: 100%
   }
 }
 @media (max-width: 450px) {
@@ -121,5 +153,8 @@ nav {
   .hero-content-container button {
     font-size: 1.2rem;
     padding: 0.25rem;
+  }
+  #services-section h2 {
+    font-size: 2rem;
   }
 }
