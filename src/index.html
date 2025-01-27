@@ -13,6 +13,10 @@
       name="description"
       content="Professional pool maintenance and repair services in Greater Orlando. Keep your pool sparkling clean and in top condition year-round with expert care tailored to your needs.Expert pool maintenance and repair services in Greater Orlando. Keep your pool clean year-round—get a quote today for reliable, professional care!"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <nav>
@@ -77,11 +81,11 @@
         </div>
       </section>
       <section id="form">
-        <form action="submit">
+        <form class="form-info" action="submit">
           <h2>SERVICE DETAILS</h2>
           <div class="form-inner-sections">
-            <label for="Full Name">Full Name</label>
-            <input type="text" name="Full Name" id="Full Name" required />
+            <label for="fullname">Full Name</label>
+            <input type="text" name="fullename" id="fullname" required />
             <label for="service">Requested Service</label>
             <select id="service" name="service" required>
               <option value="" disabled selected>Choose a service</option>
@@ -92,7 +96,7 @@
             </select>
           </div>
           <div class="exit-wrapper">
-            <p><Span>X</Span></p>
+            <p><span>X</span></p>
           </div>
           <h2>SERVICE ADDRESS</h2>
           <div class="form-inner-sections">
@@ -125,6 +129,7 @@
                 type="text"
                 name="state"
                 id="state"
+                value="FL"
                 placeholder="FL"
                 disabled
               />
@@ -143,6 +148,7 @@
               name="country"
               id="country"
               placeholder="US"
+              value="US"
               disabled
             />
           </div>
@@ -163,7 +169,7 @@
             <label for="message">Message</label>
             <p>
               Please include any additional information about your needs so that
-              we may better serve you. 
+              we may better serve you.
             </p>
             <textarea
               id="message"
@@ -171,16 +177,6 @@
               placeholder="Enter your message here..."
               rows="3"
             ></textarea>
-            <label for="file-upload">Upload File</label>
-            <p>Upload pictures of your pool and equipment</p>
-            <input
-              class="file-upload"
-              type="file"
-              id="file-upload"
-              name="file-upload"
-              accept=".jpg,.png,.pdf,.doc,.docx"
-            />
-            <small>Accepted file types: .jpg, .png, .pdf, .doc, .docx</small>
           </div>
 
           <button type="submit" class="form-button">Submit</button>

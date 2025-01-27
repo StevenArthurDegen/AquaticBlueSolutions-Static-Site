@@ -58,3 +58,60 @@ extraServices.forEach((item) => {
   serviceItem.append(description);
   extraRow.append(serviceItem);
 });
+//-------------------------Code for Emailjs-------------------------
+const form = document.querySelector(".form-info");
+const fullName = document.getElementById("fullname");
+const service = document.getElementById("service");
+const address = document.getElementById("address");
+const address2 = document.getElementById("address2");
+const city = document.getElementById("city");
+const state = document.getElementById("state");
+const zip = document.getElementById("zip");
+const country = document.getElementById("country");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const message = document.getElementById("message");
+
+const serviceID = "Aquatic Blue Solutions";
+const templateID = "template_ec43cvj";
+const publicKey = "UntkcSkBXTRHFlamo";
+
+emailjs.init(publicKey);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const inputData = {
+    to_name: "Aquatic Blue Solutions",
+    user_name: fullName.value,
+    selected_service: service.value,
+    user_address: address.value,
+    user_address2: address2.value,
+    user_city: city.value,
+    user_state: state.value,
+    user_zip: zip.value,
+    user_country: country.value,
+    user_email: email.value,
+    user_phone: phone.value,
+    user_message: message.value,
+  };
+  emailjs.send(serviceID, templateID, inputData).then(
+    () => {
+      fullName.value = "";
+      service.value = "";
+      address.value = "";
+      address2.value = "";
+      city.value = "";
+      state.value = "";
+      zip.value = "";
+      country.value = "";
+      email.value = "";
+      phone.value = "";
+      message.value = "";
+
+      alert("Form has been sent!");
+    },
+    (er) => {
+      console.log(er);
+    }
+  );
+});
