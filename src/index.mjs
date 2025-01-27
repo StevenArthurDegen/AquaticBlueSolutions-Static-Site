@@ -1,4 +1,27 @@
 import { services, extraServices } from "./data.mjs";
+
+//------------------------Form overlay display hidden/flex--------------------------------
+const button = document.querySelectorAll(".quote-button");
+const formSection = document.getElementById("form");
+const exit = document.querySelector(".exit-wrapper");
+
+exit.addEventListener("click", () => {
+  if (formSection.style.display === "none") {
+    formSection.style.display = "flex";
+  } else {
+    formSection.style.display = "none";
+  }
+});
+button.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (formSection.style.display === "none") {
+      formSection.style.display = "flex";
+    } else {
+      formSection.style.display = "none";
+    }
+  });
+});
+//---------------------------Inject data for service sections-------------------------------
 const servicesContainer = document.querySelector(".services-container");
 const topRow = document.querySelector(".top-row");
 const bottomRow = document.querySelector(".bottom-row");
@@ -35,5 +58,3 @@ extraServices.forEach((item) => {
   serviceItem.append(description);
   extraRow.append(serviceItem);
 });
-
-// console.log(serviceItemArray);

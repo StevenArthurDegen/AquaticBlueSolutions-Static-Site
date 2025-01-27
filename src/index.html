@@ -20,7 +20,7 @@
     </nav>
     <main>
       <section id="hero-section">
-        <h1 class="z-index">Pool Maintenance Solutions</h1>
+        <h1 class="z-index">POOL MAINTENANCE SOLUTIONS</h1>
         <div class="hero-image-wrapper z-index">
           <img
             src="./public/heroImage.png"
@@ -30,7 +30,7 @@
         </div>
         <div class="hero-content-container z-index">
           <div class="hero-content-wrapper">
-            <h2>Aquatic Blue Solutions</h2>
+            <h2>AQUATIC BLUE SOLUTIONS</h2>
             <p>
               Our team of experts is dedicated to keeping your pool clean and
               sparkling all year round.You can trust us to provide exceptional
@@ -44,14 +44,14 @@
         <img src="./public/palmTrees.png" alt="Palm Trees" class="palm-trees" />
       </section>
       <section id="services-section">
-        <h2>Included in service</h2>
+        <h2>INCLUDED IN SERVICES</h2>
         <div class="services-container">
           <div class="services-wrapper top-row"><!-- injecting js data --></div>
           <div class="services-wrapper bottom-row">
             <!-- injecting js data -->
           </div>
         </div>
-        <h2>Extra services</h2>
+        <h2>EXTRA SERVICES</h2>
         <div class="extra-services-container">
           <div class="services-wrapper extra-services-wrapper">
             <!-- injecting js data -->
@@ -75,6 +75,116 @@
             <button class="quote-button">GET A QUOTE</button>
           </div>
         </div>
+      </section>
+      <section id="form">
+        <form action="submit">
+          <h2>SERVICE DETAILS</h2>
+          <div class="form-inner-sections">
+            <label for="Full Name">Full Name</label>
+            <input type="text" name="Full Name" id="Full Name" required />
+            <label for="service">Requested Service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Choose a service</option>
+              <option value="POOL MAINTENANCE">Pool Maintenance</option>
+              <option value="REPAIR">Repair</option>
+              <option value="GREEN TO CLEEAN">Green to Clean</option>
+              <option value="D.E BREAKDOWN">D.E Filter Breakdown</option>
+            </select>
+          </div>
+          <div class="exit-wrapper">
+            <p><Span>X</Span></p>
+          </div>
+          <h2>SERVICE ADDRESS</h2>
+          <div class="form-inner-sections">
+            <label for="address">Street Address</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="123 Main St"
+              required
+            />
+            <label for="address2">Address Line 2 (Optional)</label>
+            <input
+              type="text"
+              id="address2"
+              name="address2"
+              placeholder="Apt, Suite, etc."
+            />
+            <div class="form-city-state">
+              <label for="city">City</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="City"
+                required
+              />
+              <label for="state">State</label>
+              <input
+                type="text"
+                name="state"
+                id="state"
+                placeholder="FL"
+                disabled
+              />
+            </div>
+            <label for="zip">ZIP/Postal Code</label>
+            <input
+              type="text"
+              id="zip"
+              name="zip"
+              placeholder="12345"
+              required
+            />
+            <label for="country">Country</label>
+            <input
+              type="text"
+              name="country"
+              id="country"
+              placeholder="US"
+              disabled
+            />
+          </div>
+          <h2>CONTACT INFO</h2>
+          <div class="form-inner-sections">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="123-456-7890"
+              required
+            />
+          </div>
+          <div class="form-inner-sections">
+            <label for="message">Message</label>
+            <p>
+              Please include any additional information about your needs so that
+              we may better serve you. 
+            </p>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message here..."
+              rows="3"
+            ></textarea>
+            <label for="file-upload">Upload File</label>
+            <p>Upload pictures of your pool and equipment</p>
+            <input
+              class="file-upload"
+              type="file"
+              id="file-upload"
+              name="file-upload"
+              accept=".jpg,.png,.pdf,.doc,.docx"
+            />
+            <small>Accepted file types: .jpg, .png, .pdf, .doc, .docx</small>
+          </div>
+
+          <button type="submit" class="form-button">Submit</button>
+        </form>
       </section>
     </main>
     <script src="./index.mjs" type="module"></script>

@@ -3,20 +3,15 @@
   margin: 0;
   font-family: "Inter", serif;
 }
-h1 {
-  font-family: "Dela Gothic One", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-h2 {
-  font-family: "Dela Gothic One", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+h1,
+h2,
 h3 {
   font-family: "Dela Gothic One", serif;
   font-weight: 400;
   font-style: normal;
+}
+button {
+  cursor: pointer;
 }
 nav {
   background-color: #fffaee;
@@ -155,6 +150,83 @@ nav {
 .cta-wrapper p {
   width: 60%;
 }
+#form {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.62);
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  position: relative;
+  background-color: #fffaee;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  padding: .5rem;
+  border-radius: 1.5rem;
+}
+.form-inner-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 4px;
+}
+.form-city-state {
+  display: flex;
+  padding: 0.25rem 0;
+}
+.form-city-state input{
+  width: 33%;
+}
+form h2 {
+  font-size: 1rem;
+}
+form p {
+  font-size: 0.75rem;
+}
+label {
+  font-family: "Dela Gothic One", serif;
+  font-size: 0.75rem;
+}
+input,
+select {
+  border: 2px solid #f9b706;
+  background-color: #fffaee;
+  height: 1.5rem;
+  width: auto;
+}
+.file-upload {
+  border: none;
+}
+.form-button {
+  width: 50%;
+  color: white;
+  font-size: 1rem;
+  background-color: #f96a06;
+  border: 2px solid #bb0f0f;
+  padding: 0.25rem;
+  border-radius: 8px;
+  margin: auto;
+  font-family: "Dela Gothic One", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+.exit-wrapper {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #bb0f0f;
+  cursor: pointer;
+}
+.exit-wrapper p{
+  font-size: 2rem;
+}
 
 @media (max-width: 1000px) {
   .hero-content-container {
@@ -168,10 +240,10 @@ nav {
   .tropical-tree-wrapper img {
     width: 50%;
   }
-  #final-cta{
+  #final-cta {
     padding: 2rem 2.5rem;
   }
-  .cta-wrapper{
+  .cta-wrapper {
     gap: 1rem;
     height: auto;
   }
@@ -182,8 +254,14 @@ nav {
   .cta-content-wrapper p {
     width: 100%;
   }
-  .cta-content-wrapper button{
+  .cta-content-wrapper button {
     width: 100%;
+  }
+  #form {
+    padding:1rem 0;
+  }
+  form{
+    width: 75%;
   }
 }
 @media (max-width: 700px) {
@@ -209,12 +287,15 @@ nav {
   .tropical-tree-wrapper img {
     width: 100%;
   }
-  #final-cta h2{
+  #final-cta h2 {
     font-size: 2rem;
   }
-  .cta-wrapper{
+  .cta-wrapper {
     padding: 1rem;
-    gap: .5rem;
+    gap: 0.5rem;
+  }
+  #form {
+    padding:0;
   }
 }
 @media (max-width: 450px) {
@@ -231,10 +312,10 @@ nav {
   #services-section h2 {
     font-size: 2rem;
   }
-  #final-cta h2{
+  #final-cta h2 {
     font-size: 2rem;
   }
-  .cta-wrapper{
+  .cta-wrapper {
     gap: 1rem;
   }
   .cta-content-wrapper {
@@ -244,5 +325,7 @@ nav {
   .cta-content-wrapper p {
     width: 100%;
   }
-  
+  form {
+    width: 75%;
+  }
 }
